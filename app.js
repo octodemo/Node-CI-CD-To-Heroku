@@ -4,6 +4,8 @@ const numberService = require('./index');
 const port = process.env.PORT || 3000;
 const app = express();
 
+//express server
+
 app.all('/list', (req, resp) => {
   console.log(req.query.list, numberService);
 
