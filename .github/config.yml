@@ -1,0 +1,4 @@
+todo:
+  keyword: "@makeAnIssue"
+  autoAssign: true
+  blobLines: 5
