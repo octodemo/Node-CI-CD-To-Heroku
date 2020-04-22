@@ -10,7 +10,7 @@ on:
     paths-ignore:
        - "docs/**"
        - ".github/**"
-       - "README.md"
+   #    - "README.md"
    #paths:
        #- 'service-1/**'
    #schedule:
