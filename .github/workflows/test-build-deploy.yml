@@ -40,7 +40,7 @@ jobs:
     #   with:
     #     nexmoNumber: ${{ secrets.NEXMO_NUMBER }}
     #     recipientNumber: 15126887422
-    #     message: "This is an example from ${{ github.repository }} by ${{ github.actor }}."
+    #     message: "This is an example alert from ${{ github.repository }} by ${{ github.actor }}."
     #   if: failure()
 
   # publish-github-packages:
