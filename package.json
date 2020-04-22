@@ -1,7 +1,7 @@
 {
-  "name": "@octodemo/fedex-demoo",
+  "name": "@octodemo/fedex-demo-cicd",
   "version": "1.0.0",
-  "description": "| TEST | DEPLOY |  |-------|-------|",
+  "description": "Node application for Fedex Demo",
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
