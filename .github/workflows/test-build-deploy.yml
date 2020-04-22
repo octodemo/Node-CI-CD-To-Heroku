@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - develop
-  pull_request:
-    branches:
-      - master
+#   pull_request:
+#     branches:
+#       - master
     paths-ignore:
        - "docs/**"
    #    - ".github/**"
@@ -35,40 +35,40 @@ jobs:
     - run: npm install
     - run: npm run build --if-present
     - run: npm test
-    # - name: Send SMS
-    #   uses: nexmo-community/nexmo-sms-action@master
-    #   env:
-    #     NEXMO_API_KEY: ${{ secrets.NEXMO_API_KEY }}
-    #     NEXMO_API_SECRET: ${{ secrets.NEXMO_API_SECRET }}
-    #   with:
-    #     nexmoNumber: ${{ secrets.NEXMO_NUMBER }}
-    #     recipientNumber: 15126887422
-    #     message: "This is an example alert from ${{ github.repository }} by ${{ github.actor }}."
-    #   if: failure()
+    - name: Send SMS
+      uses: nexmo-community/nexmo-sms-action@master
+      env:
+        NEXMO_API_KEY: ${{ secrets.NEXMO_API_KEY }}
+        NEXMO_API_SECRET: ${{ secrets.NEXMO_API_SECRET }}
+      with:
+        nexmoNumber: ${{ secrets.NEXMO_NUMBER }}
+        recipientNumber: 15126887422
+        message: "This is an example alert from ${{ github.repository }} by ${{ github.actor }}."
+      if: failure()
 
-  # publish-github-packages:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 12
-  #         registry-url: https://npm.pkg.github.com/
-  #     - run: npm publish
-  #       env:
-  #         NODE_AUTH_TOKEN: ${{secrets.GHE_TOKEN}}
+  publish-github-packages:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GHE_TOKEN}}
 
-  # deploy-to-heroku:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: akhileshns/heroku-deploy@v3.0.4 # This is the action
-  #       with:
-  #         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-  #         heroku_app_name: "fedex-demo" #Must be unique in Heroku
-  #         heroku_email: "alwell.kevin@gmail.com"
+  deploy-to-heroku:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.0.4 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "fedex-demo" #Must be unique in Heroku
+          heroku_email: "alwell.kevin@gmail.com"
 
 
 
