@@ -1,0 +1,25 @@
+{
+  "name": "fedex-demo",
+  "version": "1.0.0",
+  "description": "| TEST | DEPLOY |  |-------|-------|",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^25.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --ci --color --verbose",
+    "start": "node ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/octodemo/fedex-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/octodemo/fedex-demo/issues"
+  },
+  "homepage": "https://github.com/octodemo/fedex-demo#readme"
+}
