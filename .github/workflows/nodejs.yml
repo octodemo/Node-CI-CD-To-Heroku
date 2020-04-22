@@ -5,7 +5,7 @@ name: Fedex Fibonacci CI & Build
 
 on:
   push:
-    branches: [ introduce-ci ]
+    branches: [ master ]
 
 jobs:
   build:
