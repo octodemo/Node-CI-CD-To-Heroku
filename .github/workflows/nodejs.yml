@@ -28,7 +28,7 @@ jobs:
       env:
         CI: true
 
-  publish-gpr:
+  publish-github-packages:
     needs: build
     runs-on: ubuntu-latest
     steps:
