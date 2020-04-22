@@ -1,5 +1,6 @@
-| TEST | DEPLOY | 
-|-------|-------|
+![Fedex Fibonacci CI & Build](https://github.com/octodemo/fedex-demo/workflows/Fedex%20Fibonacci%20CI%20&%20Build/badge.svg)
+
+Demonstrates CI/CD with GitHub Actions and Packages
 
 # fib-tools
 
