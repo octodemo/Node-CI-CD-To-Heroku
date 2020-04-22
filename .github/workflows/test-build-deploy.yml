@@ -1,4 +1,4 @@
-name: Fedex Fibonacci CI & Build
+name: Fedex Fibonacci CI/CD & Build
 
 on:
   push:
