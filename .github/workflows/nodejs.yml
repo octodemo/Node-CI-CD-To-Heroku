@@ -32,16 +32,16 @@ jobs:
     - run: npm install
     - run: npm run build --if-present
     - run: npm test
-    # - name: Send SMS
-    #   uses: nexmo-community/nexmo-sms-action@master
-    #   env:
-    #     NEXMO_API_KEY: ${{ secrets.NEXMO_API_KEY }}
-    #     NEXMO_API_SECRET: ${{ secrets.NEXMO_API_SECRET }}
-    #   with:
-    #     nexmoNumber: ${{ secrets.NEXMO_NUMBER }}
-    #     recipientNumber: 17326157295 #update phone number
-    #     message: "This is an example from ${{ github.repository }} by ${{ github.actor }}."
-    #   if: failure()
+    - name: Send SMS
+      uses: nexmo-community/nexmo-sms-action@master
+      env:
+        NEXMO_API_KEY: ${{ secrets.NEXMO_API_KEY }}
+        NEXMO_API_SECRET: ${{ secrets.NEXMO_API_SECRET }}
+      with:
+        nexmoNumber: ${{ secrets.NEXMO_NUMBER }}
+        recipientNumber: 15126887422 #update phone number -> 15126887422
+        message: "This is an example from ${{ github.repository }} by ${{ github.actor }}."
+      if: failure()
 
   # publish-github-packages:
   #   needs: build
