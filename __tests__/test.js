@@ -2,7 +2,7 @@ const {getNumber, getList, getSequence} = require('../index')
 
 describe('getList', () => {
   test('returns [0] for the 0th number sequence', () => {
-    expect(getList(0)).toEqual([1])
+    expect(getList(0)).toEqual([0])
   })
 
   test('returns [0, 1] for the 1st number sequence', () => {
