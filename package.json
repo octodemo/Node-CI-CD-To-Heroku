@@ -1,5 +1,5 @@
 {
-  "name": "fedex-demo",
+  "name": "@octodemo/fedex-demo",
   "version": "1.0.0",
   "description": "| TEST | DEPLOY |  |-------|-------|",
   "main": "index.js",
