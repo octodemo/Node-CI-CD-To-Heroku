@@ -1,4 +1,4 @@
-![Fedex Fibonacci CI & Build](https://github.com/octodemo/fedex-demo/workflows/Fedex%20Fibonacci%20CI%20&%20Build/badge.svg?branch=master)
+![Fedex Fibonacci CI & Build](https://github.com/octodemo/fedex-demo/workflows/Fedex%20Fibonacci%20CI%20&%20Build/badge.svg?branch=master), ![Code scanning - action](https://github.com/octodemo/Node-CI-CD-To-Heroku/workflows/Code%20scanning%20-%20action/badge.svg)
 
 Demonstrates CI/CD with GitHub Actions and Packages.
 
