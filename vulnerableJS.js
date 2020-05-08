@@ -20,6 +20,8 @@ function emptyIfBlock () {
 
 var link = '<a href="http://example.com" target="_blank">Example</a>';
 
+var AWSKey = "lkjf20jef02ijokfjldksjflkj2f"
+
 printLines()
 emptyMethod()
 emptyIfBlock()
