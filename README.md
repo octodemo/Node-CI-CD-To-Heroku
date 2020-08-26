@@ -32,4 +32,4 @@ for (const n of seq) {
 }
 ```
 
-Testing an ongoing issue?
+Is this an issue?
