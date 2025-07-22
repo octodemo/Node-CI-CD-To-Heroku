@@ -4,8 +4,8 @@
   "description": "Node application for Fedex Demo",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1",
-    "jest": "^25.4.0"
+    "express": "^4.20.0",
+    "jest": "^30.0.5"
   },
   "devDependencies": {},
   "scripts": {
